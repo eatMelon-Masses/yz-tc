@@ -29,6 +29,6 @@ spec:
     spec:
       containers:
       - name: maven
-        image: docker.io/yiezi/start:latest
+        image: docker.io/11764404/start:latest
         ports:
         - containerPort: 8080
