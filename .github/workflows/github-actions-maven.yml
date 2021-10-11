@@ -20,8 +20,8 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_SECRET }}
-      - name: Build with Maven
-      run: mvn spring-boot:build-image -f pom.xml
+      - name: Build docker image with Maven
+      run: mvn spring-boot:build-image -f ./start/pom.xml
       - name: tag with run id
       run: docker tag docker.io/yiezi/start:latest  docker.io/yiezi/start:${{ github.run_id }}
       - name: push
