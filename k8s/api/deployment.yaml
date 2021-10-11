@@ -27,10 +27,8 @@ spec:
       labels:
         app: yz-tc
     spec:
-      imagePullSecrets:
-      - name: pipeline-docker-registry
       containers:
       - name: maven
-        image: ${CICD_IMAGE}:${CICD_EXECUTION_SEQUENCE}
+        image: docker.io/yiezi/start:latest
         ports:
         - containerPort: 8080
