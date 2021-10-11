@@ -14,7 +14,7 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
       - name: Build with Maven
-        run: mvn -U clean  package    -pl  ./start -am -Dmaven.test.skip=true
+        run: mvn -U clean  -B package    -pl  ./start -am -Dmaven.test.skip=true
       - name: Login to DockerHub
         uses: docker/login-action@v1
         with:
