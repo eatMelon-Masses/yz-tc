@@ -27,7 +27,7 @@ jobs:
       - name: push
         run: docker push docker.io/yiezi/start:${{ github.run_id }}
       - name: change permissions
-      run: chmod +x k8s/api/replace.sh
+        run: chmod +x k8s/api/replace.sh
       - name: replace tag
         run: k8s/api/replace.sh API_TAG ${{ github.run_id }}
       - name: Extract branch name
