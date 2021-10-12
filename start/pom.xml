@@ -10,7 +10,7 @@
 
     <artifactId>start</artifactId>
     <packaging>jar</packaging>
-    <name>start</name>
+    <name>yz-tc-start</name>
 
     <dependencies>
         <dependency>

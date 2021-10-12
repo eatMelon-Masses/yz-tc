@@ -175,7 +175,7 @@
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-maven-plugin</artifactId>
                     <configuration>
-                        <imageName>11764404/${project.name}:latest</imageName>
+                        <imageName>yiezi/${project.name}:latest</imageName>
                     </configuration>
                     <version>${spring-boot.version}</version>
                 </plugin>
