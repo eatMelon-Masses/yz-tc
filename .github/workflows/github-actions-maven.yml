@@ -39,7 +39,7 @@ jobs:
 #      - name: Build with Maven
 #        run: mvn  spring-boot:build-image -f ./start/pom.xml -am
       - name: tag with run id
-        run: docker tag registry.cn-chengdu.aliyuncs.com/yiezi/yz-tc-start:latest  registry.cn-chengdu.aliyuncs.com/yiezi/yz-tc-start:${{ github.run_id }}
+        run: docker tag docker.io/yiezi/yz-tc-start:latest  registry.cn-chengdu.aliyuncs.com/yiezi/yz-tc-start:${{ github.run_id }}
       - name: push
         run: docker push registry.cn-chengdu.aliyuncs.com/yiezi/yz-tc-start:${{ github.run_id }}
       - name: change permissions
