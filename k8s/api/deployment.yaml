@@ -29,6 +29,6 @@ spec:
     spec:
       containers:
       - name: maven
-        image: docker.io/yiezi/yz-tc-start:API_TAG
+        image: registry.cn-chengdu.aliyuncs.com/yiezi/yz-tc-start:API_TAG
         ports:
         - containerPort: 8080
