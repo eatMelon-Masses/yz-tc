@@ -10,10 +10,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author Frank Zhang
  */
 @SpringBootApplication(scanBasePackages = {"yiezi.ml","com.alibaba.cola"})
-@MapperScan("yiezi.ml.repository")
+@MapperScan("yiezi.ml.customer")
 public class Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
     }
 }

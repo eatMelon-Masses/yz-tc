@@ -2,11 +2,11 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="yiezi.ml.datatunnel.CustomerTunnelI">
-    <select id="findByCriteria" resultType="yiezi.ml.database.dataobject.CustomerDO" resultMap="customerMap">
-        select * from customer where customer_id = #{id}
+<mapper namespace="yiezi.ml.customer.CustomerMapper">
+    <select id="selectAll" resultType="yiezi.ml.customer.CustomerDO" resultMap="customerMap"  >
+        select * from customer
     </select>
-    <resultMap type="yiezi.ml.database.dataobject.CustomerDO" id="customerMap">
+    <resultMap type="yiezi.ml.customer.CustomerDO" id="customerMap" >
          <result property="customerId" column="emp_no"/>
          <result property="memberId" column="salary"/>
          <result property="globalId" column="from_date"/>

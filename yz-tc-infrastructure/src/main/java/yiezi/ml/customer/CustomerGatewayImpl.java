@@ -12,7 +12,7 @@ public class CustomerGatewayImpl implements CustomerGateway {
     private CustomerMapper customerMapper;
 
     public Customer getByById(String customerId){
-      CustomerDO customerDO = customerMapper.getById(customerId);
+      CustomerDO customerDO = customerMapper.selectAll();
       //Convert to Customer
       return null;
     }
