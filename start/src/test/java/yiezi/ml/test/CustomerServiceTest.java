@@ -1,25 +1,21 @@
 package yiezi.ml.test;
 
 import com.alibaba.cola.dto.Response;
+import org.junit.Assert;
+import org.junit.Before;
+import org.springframework.beans.factory.annotation.Autowired;
 import yiezi.ml.api.CustomerServiceI;
 import yiezi.ml.dto.CustomerAddCmd;
 import yiezi.ml.dto.data.CustomerDTO;
 import yiezi.ml.dto.data.ErrorCode;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
 
 /**
  * This is for integration test.
- *
+ * <p>
  * Created by fulan.zjf on 2017/11/29.
  */
-@RunWith(SpringRunner.class)
-@SpringBootTest
+//@RunWith(SpringRunner.class)
+//@SpringBootTest
 public class CustomerServiceTest {
 
     @Autowired
@@ -31,8 +27,8 @@ public class CustomerServiceTest {
 
     }
 
-    @Test
-    public void testCustomerAddSuccess(){
+    // @Test
+    public void testCustomerAddSuccess() {
         //1.prepare
         CustomerAddCmd customerAddCmd = new CustomerAddCmd();
         CustomerDTO customerDTO = new CustomerDTO();
@@ -46,8 +42,8 @@ public class CustomerServiceTest {
         Assert.assertTrue(response.isSuccess());
     }
 
-    @Test
-    public void testCustomerAddCompanyNameConflict(){
+    //@Test
+    public void testCustomerAddCompanyNameConflict() {
         //1.prepare
         CustomerAddCmd customerAddCmd = new CustomerAddCmd();
         CustomerDTO customerDTO = new CustomerDTO();

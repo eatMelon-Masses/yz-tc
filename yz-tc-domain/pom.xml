@@ -27,6 +27,16 @@
             <groupId>yiezi.ml</groupId>
             <artifactId>yz-tc-client</artifactId>
         </dependency>
+      <dependency>
+        <groupId>com.google.code.gson</groupId>
+        <artifactId>gson</artifactId>
+      </dependency>
+        <dependency>
+            <groupId>com.tencentcloudapi</groupId>
+            <artifactId>tencentcloud-sdk-java-lighthouse</artifactId>
+            <version>3.1.588</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
     <build>
