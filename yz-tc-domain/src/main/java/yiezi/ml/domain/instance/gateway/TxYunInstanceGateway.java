@@ -7,5 +7,5 @@ import java.util.List;
  * @date 2022/9/12
  */
 public interface TxYunInstanceGateway {
-    public List<TxInstanceInfo> getTxInstanceInfoByRegion(String region);
+    public List<TxInstanceInfo> getTxInstanceInfoByRegion(List<String> regions);
 }
