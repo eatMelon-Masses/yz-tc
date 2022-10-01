@@ -9,6 +9,7 @@ import yiezi.ml.dto.data.TxInstanceDTO;
 import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 /**
@@ -21,9 +22,16 @@ public class InstanceListByReginQryExe {
     private TxYunInstanceGateway instanceGateway;
     @Value("${yun.tx.regions:ap-guangzhou,ap-hongkong}")
     private List<String> regions = new ArrayList<>();
+    @Value("${yun.tx.cache:true}")
+    private Boolean isCache;
+    private List<TxInstanceDTO> cache = null;
 
     public List<TxInstanceDTO> getInstances() {
-
-        return instanceGateway.getTxInstanceInfoByRegion(regions).stream().map(InstanceMapper.INSTANCE::instanceInfoToInstanceDTO).collect(Collectors.toList());
+        if (isCache && Objects.nonNull(cache)) {
+            return cache;
+        } else {
+            cache = instanceGateway.getTxInstanceInfoByRegion(regions).stream().map(InstanceMapper.INSTANCE::instanceInfoToInstanceDTO).collect(Collectors.toList());
+        }
+        return cache;
     }
 }
